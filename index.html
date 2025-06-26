@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shinhan Microfinance Myanmar</title>
+  <style>
+    body { font-family: "Myanmar Text", Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
+    header, footer { background: #003366; color: white; padding: 15px 20px; }
+    header { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; }
+    .logo { font-size: 24px; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 15px; padding: 0; margin: 0; }
+    nav ul li a {
+      color: white; text-decoration: none; font-weight: 600;
+      cursor: pointer;
+    }
+    nav ul li a:hover { text-decoration: underline; }
+    section {
+      display: none;
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+    section.active { display: block; }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+      color: white; text-align: center;
+      height: 350px; display: flex; flex-direction: column;
+      justify-content: center;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+    .cta-btn {
+      background: #00a99d; padding: 12px 30px; border-radius: 30px;
+      font-weight: bold; font-size: 1.1rem; color: white; display: inline-block;
+      text-decoration: none;
+    }
+    .cta-btn:hover { background: #007c76; }
+
+    h2 { color: #003366; border-bottom: 3px solid #00a99d; display: inline-block; margin-bottom: 15px; }
+    h3 { color: #007c76; margin-bottom: 8px; }
+    .product { margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 6px; }
+    article { margin-bottom: 20px; }
+    footer { text-align: center; font-size: 0.9rem; margin-top: 30px; }
+
+    @media (max-width: 700px) {
+      nav ul { flex-direction: column; gap: 10px; margin-top: 10px; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Shinhan Microfinance</div>
+  <nav>
+    <ul>
+      <li><a onclick="showTab('home')">ပင်မ</a></li>
+      <li><a onclick="showTab('about')">အကြောင်းအရာ</a></li>
+      <li><a onclick="showTab('products')">ချေးငွေများ</a></li>
+      <li><a onclick="showTab('news')">သတင်း</a></li>
+      <li><a onclick="showTab('contact')">ဆက်သွယ်ရန်</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="active">
+  <div class="hero">
+    <h1>Growing Together, Sharing Happiness</h1>
+    <a onclick="showTab('about')" class="cta-btn">Learn More</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>ကျွန်ုပ်တို့အကြောင်း</h2>
+  <p>
+    Shinhan Microfinance Myanmar was founded in 2016 and licensed by the Myanmar Microfinance Supervisory Committee.
+    We provide responsible microfinance to underserved communities, promoting transparency and long-term growth.
+  </p>
+  <p>
+    Headquarters: No.206, Thiri Mingalar Street, East Ywama, Insein Township, Yangon<br>
+    Phone: 01 643 685<br>
+    Email: info@shinhanmyanmar.com
+  </p>
+</section>
+
+<section id="products">
+  <h2>ချေးငွေထုတ်ကုန်များ</h2>
+
+  <div class="product">
+    <h3>အုပ်စုချေးငွေ (Group Loan)</h3>
+    <p>Group-based loans for individuals starting or growing small businesses with peer accountability and support.</p>
+  </div>
+
+  <div class="product">
+    <h3>တစ်ဦးချင်းချေးငွေ (Individual Loan)</h3>
+    <p>Tailored loan products for individual borrowers expanding their business or working independently.</p>
+  </div>
+
+  <div class="product">
+    <h3>ကိုရီးယားအလုပ်သမားချေးငွေ (Korea Worker Loan)</h3>
+    <p>For individuals approved by the Ministry of Labour to work in Korea.
+       Loan amounts range from 1,000,000 to 8,000,000 MMK depending on their needs and situation.</p>
+  </div>
+</section>
+
+<section id="news">
+  <h2>သတင်းများ</h2>
+  <article>
+    <h3>Shinhan Microfinance Expands Services Nationwide</h3>
+    <p>
+      As of 2025, Shinhan Microfinance Myanmar supports at least <strong>80,000 customers</strong> with responsible and inclusive financial services across Myanmar.
+    </p>
+  </article>
+</section>
+
+<section id="contact">
+  <h2>ဆက်သွယ်ရန်</h2>
+  <p><strong>Head Office (Yangon)</strong></p>
+  <p>No.206, Thiri Mingalar Street, East Ywama, Insein Township, Yangon</p>
+  <p>Phone: 01 643 685</p>
+  <p>Email: info@shinhanmyanmar.com</p>
+</section>
+
+<footer>
+  <p>© 2025 Shinhan Microfinance Myanmar | All rights reserved</p>
+</footer>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
